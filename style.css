@@ -1,5 +1,5 @@
 * {
-  background: #E9ECF8;
+  background: #E5E5E5;
 }
 
 * {
@@ -21,12 +21,14 @@
   font-size: 32px;
   color: #0A3871;
   padding: 16px;
-  height: 327px;
+  height: 257px;
+  font-size: 24px;
 }
 
 .textArea:focus {
   box-shadow: 0 0 0 0;
   outline: 0;
+
 }
 
 .textArea::placeholder {
@@ -62,4 +64,30 @@ button {
 
 .decrypt {
   color: #0A3871
+}
+
+.result {
+  height: 247px;
+  background: white;
+  /* border: 1px solid red; */
+  Effect: Drop shadow;
+  border-radius: 32px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin: 16px;
+
+}
+
+.result h1 {
+  font-size: 24px;
+  text-align: center;
+  margin: 32px;
+  background: white;
+  padding-top: 30px;
+}
+
+.result p {
+  font-size: 16px;
+  text-align: center;
+  background: white;
+  margin: 32px;
 }
