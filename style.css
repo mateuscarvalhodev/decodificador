@@ -1,0 +1,65 @@
+* {
+  background: #E9ECF8;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.logo {
+  margin: 24px 16px;
+  height: 48px;
+  width: 32px;
+}
+
+.textArea {
+  line-height: 48px;
+  border: none;
+  font-size: 32px;
+  color: #0A3871;
+  padding: 16px;
+  height: 327px;
+}
+
+.textArea:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+}
+
+.textArea::placeholder {
+  color: #0A3871;
+  font-size: 32px;
+  line-height: 48px;
+  padding: 20px 16px;
+}
+p {
+  margin: 16px;
+}
+
+.alert {
+  font-size: 12px;
+  color: #343A40;
+}
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 343px;
+  height: 67px;
+  font-size: 16px;
+  border-radius: 24px;
+  margin: 16px;
+  border-color: #0A3871;
+}
+
+.encrypt {
+  color: white;
+  background: #0A3871;
+}
+
+.decrypt {
+  color: #0A3871
+}
