@@ -11,11 +11,11 @@
 <body>
   <div class="container">
     <img class="logo" src="./assets/img/Logo.svg" alt="logoAlura">
-    <textarea class="textArea" placeholder="Digite seu texto" name="" id="" cols="30" rows="10"></textarea>
+    <textarea id="textArea" class="textArea" placeholder="Digite seu texto" name="" id="" cols="30" rows="10"></textarea>
   </div>
   <P class="alert"> <img src="assets/img/Alert.svg" alt="alert"> Apenas letras minúsculas e sem acento</P>
-  <button class="encrypt">Criptografar</button>
-  <button class="decrypt">Criptografar</button>
+  <button onclick="encrypt(textForEncrypt)" id="encrypt" class="encrypt">Criptografar</button>
+  <button id="decrypt" class="decrypt">Descriptografar</button>
   <div class="result">
     <h1 id="results">Nenhuma mensagem encontrada</h1>
     <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
