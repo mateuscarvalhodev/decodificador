@@ -19,6 +19,11 @@ function encrypt(textForEncrypt) {
 
     return textForEncrypt;
   }
+  const buttonEncrypt = document.getElementById('buttonEncrypt');
+    buttonEncrypt.disabled = true;
+  const buttonDecrypt = document.getElementById('buttonDecrypt');
+    buttonDecrypt.disabled = true;
+    
   textArea.oninput = function() {
     textForEncrypt = this.value;
     if(textForEncrypt.length > 0) {
