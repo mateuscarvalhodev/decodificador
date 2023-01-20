@@ -112,12 +112,14 @@
     width: 32px;
     /* border: 1px solid red; */
   }
-
+  
   .textArea {
     color: #0A3871;
     padding: 10px;
-    height: 257px;
-    width: 60%;
+    height: 557px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
   }
   .textArea:focus {
     box-shadow: 0 0 0 0;
@@ -157,7 +159,7 @@
     width: 25%;
     /* display: flex; */
     
-    border: 1px solid red;
+    /* border: 1px solid red; */
   }
   #results {
     font-size: 24px;
@@ -168,5 +170,12 @@
     font-size: 16px;
     width: 336px;
     text-align: center;
+  }
+  .qualquer {
+    border: 1px solid red;
+    width: 70%;
+    box-sizing: border-box;
+    /* display: flex; */
+    display: grid;
   }
 }
