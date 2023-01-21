@@ -5,8 +5,15 @@
 * {
   font-family: 'Inter', sans-serif;
 }
+
+.all {
+  display: flex;
+}
 @media only screen and (max-width: 768px) {
 
+  .all {
+    display: block;
+  }
   .container {
     display: flex;
     flex-direction: column;
@@ -156,17 +163,22 @@
     display: flex;
   }
   .result {
-    width: 25%;
-    /* display: flex; */
-    
-    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #fff;
+    border: 1px solid red;
   }
   #results {
+    background-color: #fff;
     font-size: 24px;
     width: 336px;
     text-align: center;
   }
   #resultsText {
+    background-color: #fff;
     font-size: 16px;
     width: 336px;
     text-align: center;
