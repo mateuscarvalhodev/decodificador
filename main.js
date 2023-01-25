@@ -1,5 +1,13 @@
 const button = document.getElementById('buttonEncrypt');
 const textArea = document.getElementById('textArea');
+const notFoundImg = document.getElementById('notFound');
+const copyButton = document.getElementById('copy-button');
+const resultsText = document.getElementById("resultsText");
+
+// const buttonEncrypt = document.getElementById('buttonEncrypt');
+// const buttonDecrypt = document.getElementById('buttonDecrypt');
+// const results = document.getElementById("results")
+
 
 function encrypt(textForEncrypt) {
   textForEncrypt = textForEncrypt.replace(/e/g, 'enter')
@@ -7,7 +15,8 @@ function encrypt(textForEncrypt) {
     .replace(/a/g, 'ai')
     .replace(/o/g, 'ober')
     .replace(/u/g, 'ufat');
-    return textForEncrypt
+    
+    return textForEncrypt;
   } 
 
   function decrypt(textForEncrypt) {
@@ -19,44 +28,46 @@ function encrypt(textForEncrypt) {
 
     return textForEncrypt;
   }
-  const buttonEncrypt = document.getElementById('buttonEncrypt');
-    buttonEncrypt.disabled = true;
-  const buttonDecrypt = document.getElementById('buttonDecrypt');
-    buttonDecrypt.disabled = true;
+    // buttonEncrypt.disabled = true;
+    // buttonDecrypt.disabled = true;
     
   textArea.oninput = function() {
     textForEncrypt = this.value;
     if(textForEncrypt.length > 0) {
       buttonEncrypt.disabled = false;
       buttonDecrypt.disabled = false;
-    } else {
+    }
+     else {
       buttonEncrypt.disabled = true;
       buttonDecrypt.disabled = true;
     }
-    console.log(textForEncrypt);
-  const textEncrypted = encrypt(textForEncrypt);
-  console.log(textEncrypted)
-  ;
-  
 }
-
 
 function encryptButton() {
-  textForEncrypt = textArea.value;
   const textEncrypted = encrypt(textForEncrypt);
-  document.getElementById("results").innerHTML = '';
-  document.getElementById("resultsText").innerHTML = textEncrypted;
-  console.log('cliquei');
-  
-  
-}
+  textEncrypted = encrypt(textForEncrypt);
+  notFoundImg.style.visibility = 'hidden';
+  results.innerHTML = '';
+  resultsText.innerHTML = textEncrypted;
+} 
+
 function decryptButton() {
-  textForEncrypt = textArea.value;
+  notFoundImg.style.visibility = 'hidden';
   const textDecrypted = decrypt(textForEncrypt);
-  document.getElementById('results').innerHTML = '';
-  document.getElementById('resultsText').innerHTML = textDecrypted;
+  results.innerHTML = '';
+  resultsText.innerHTML = textDecrypted;
 }
 
+function copyToClipboard() {
+  const textToCopy = textEncrypted;
+  const textArea = document.createElement('textarea');
+  textArea.value = textToCopy;
+  document.body.appendChild(textArea);
+  textArea.select();
+  document.execCommand("copy");
+  textArea.remove();
+}
+copyButton.addEventListener("click", copyToClipboard);
 
 
 

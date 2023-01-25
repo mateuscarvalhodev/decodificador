@@ -12,22 +12,24 @@
 <div class="all">
 
 <div class="qualquer">
-  <!-- <div class="container"> -->
+  <div class="container">
     <img class="logo" src="./assets/img/Logo.svg" alt="logoAlura">
     <textarea id="textArea" class="textArea" placeholder="Digite seu texto" name="" id="" cols="30" rows="10"></textarea>
-  <!-- </div> -->
+  </div>
   <P class="alert"> <img src="assets/img/Alert.svg" alt="alert"> Apenas letras minúsculas e sem acento</P>
   <div class="buttons">
-    <button onclick="encryptButton()"  id="buttonEncrypt" class="encrypt">Criptografar</button>
-    <button onclick="decryptButton()" id="buttonDecrypt" class="decrypt">Descriptografar</button>
+    <button onclick="encryptButton()"  id="buttonEncrypt" disabled class="encrypt">Criptografar</button>
+    <button onclick="decryptButton()" id="buttonDecrypt" disabled class="decrypt">Descriptografar</button>
   </div>
 </div>
   <div class="result">
     <img id="notFound" src="./assets/img/notFound.svg" alt="A man search a message">
     <h1 id="results">Nenhuma mensagem encontrada</h1>
     <p id ="resultsText">Digite um texto que você deseja criptografar ou descriptografar.</p>
+    <button id ="copy-button">COPIAR</button>
   </div>
 </div>
+<!-- <footer></footer> -->
 
   <script src="main.js"></script>
 </body>
