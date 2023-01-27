@@ -42,24 +42,26 @@ function encrypt(textForEncrypt) {
       buttonDecrypt.disabled = true;
     }
 }
+copyButton.style.visibility = 'hidden';
 
 function encryptButton() {
   const textEncrypted = encrypt(textForEncrypt);
-  textEncrypted = encrypt(textForEncrypt);
   notFoundImg.style.visibility = 'hidden';
   results.innerHTML = '';
   resultsText.innerHTML = textEncrypted;
+  copyButton.style.visibility = 'visible'
 } 
 
 function decryptButton() {
-  notFoundImg.style.visibility = 'hidden';
   const textDecrypted = decrypt(textForEncrypt);
+  notFoundImg.style.visibility = 'hidden';
   results.innerHTML = '';
   resultsText.innerHTML = textDecrypted;
 }
 
 function copyToClipboard() {
-  const textToCopy = textEncrypted;
+  const textToCopy = resultsText.textContent;
+  console.log(textToCopy);
   const textArea = document.createElement('textarea');
   textArea.value = textToCopy;
   document.body.appendChild(textArea);
